@@ -1,15 +1,17 @@
 [package]
 name = "aurena"
+description = "Amazing terminal-based tool to display images, GIFs, videos to sixel graphics"
 version = "0.1.0"
 edition = "2024"
+authors = ["Shivani Palya <github.com/Shivanipalya26>"]
+license-file = "LICENSE"
+repository = "https://github.com/Shivanipalya26/aurena"
+readme = "README.md"
+keywords = ["sixel", "images", "videos", "aurena"]
 
 [dependencies]
-clap = "4.5.46"
+clap = { version = "4.5.46", features = ["derive"] }
 crossterm = "0.29.0"
 ffmpeg-next = "8.0.0"
 image = "0.25.6"
-terminal_size = "0.4.3"
-
-[build-dependencies]
-cc = "1.0"
-bindgen = "0.69"
+rodio = { version = "0.17", features = ["wav", "mp3", "flac", "vorbis"] }
